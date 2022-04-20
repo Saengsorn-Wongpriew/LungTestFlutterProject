@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import './home_screen.dart';
 import '../reuseable_widgets/reuserable_widget.dart';
 import '../utils/color_utils.dart';
+import 'main_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
@@ -69,7 +70,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       .then((value) {
                     print("Created New Account");
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => HomeScreen()));
+                        MaterialPageRoute(builder: (context) => MainScreen()));
                   }).onError((error, stackTrace) {
                     print("Error ${error.toString()}");
                   });
